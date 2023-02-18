@@ -50,7 +50,7 @@ export default class Dynamic extends React.Component{
                         </div>
                     </form>
                 </div>
-                <p>{this.state.userinfostore.username}</p>
+                
                 {
                     (this.state.status === true) ? 
                     (<Dynamicdatashow infostore = {this.state.userinfostore} />) 

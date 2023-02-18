@@ -1,17 +1,17 @@
 import React from "react";
 
 export default function Dynamicdatashow(props){
-    // const listItems = props.map((val,index)=>{
-    //     return (<tr key={index++}>
-    //             <td>{val.username}</td>
-    //             <td>{val.useremail}</td>
-    //             <td>{val.userlocation}</td>
-    //         </tr>);
-    // });
+    const listItems = props.infostore.map((val,index)=>{
+        return (<tr key={index++}>
+                <td>{val.username}</td>
+                <td>{val.useremail}</td>
+                <td>{val.userlocation}</td>
+            </tr>);
+    });
     return(
         <>
             <div className="container">
-                <table>
+                <table className="dinamicValue">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -20,10 +20,7 @@ export default function Dynamicdatashow(props){
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>{props.infostore.username}</td>
-                        </tr>
-                        {/* {listItems} */}
+                        {listItems}
                     </tbody>
                 </table>
             </div>
